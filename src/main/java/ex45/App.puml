@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App
+class fileMethods
+class wordMethods
+
+App <--- fileMethods
+App <--- wordMethods
+
+class App{
+userInput : Scanner
+
++main(args : String []) : void
+userInput() : String
+}
+
+class fileMethods{
++readFile(userFile : File, readHelper : Scanner) : ArrayList<String>
++writeFile(outputArray : ArrayList<String>, outputHelper : FileWriter) : void
+}
+
+class wordMethods{
++replaceWord(inputList : ArrayList<String>) : ArrayList<String>
+}
+@enduml
