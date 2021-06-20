@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App
+class fileMethods
+class jsonHandler
+
+App <--- fileMethods
+App <--- jsonHandler
+
+class App{
+userInput : Scanner
+
++main(args : String []) : void
+userInput() : String
+}
+
+class fileMethods{
++parser() : JSONObject
+}
+
+class jsonHandler{
++createArray(convert : JSONObject) : JSONArray
++isThere(input : JSONArray, name : String) : int
++printResults(input : JSONArray, i : int) : void
+}
+@enduml

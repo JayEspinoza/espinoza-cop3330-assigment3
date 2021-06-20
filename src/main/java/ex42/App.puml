@@ -5,8 +5,8 @@ class App
 class dataHandler
 class fileMethods
 
-App <|--- dataHandler
-App <|--- fileMethods
+App <--- dataHandler
+App <--- fileMethods
 
 class App{
 +main(args : String []) : void
