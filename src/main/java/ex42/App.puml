@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App
+class dataHandler
+class fileMethods
+
+App <|--- dataHandler
+App <|--- fileMethods
+
+class App{
++main(args : String []) : void
+}
+
+class dataHandler{
++parseData(inputList : ArrayList<String>) : ArrayList<String>
++ printList(parsedList : ArrayList<String>) : void
+}
+
+class fileMethods{
++readFile(inputFile: File, readHelper : Scanner) : ArrayList<String>
+}
+@enduml
